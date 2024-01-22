@@ -1,16 +1,5 @@
 # increment_getx
 
-A new Flutter project.
+Aplicação de incremento de valor padrão do Flutter usando a gerência de estado GetX.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Captura de tela 2024-01-22 141637](https://github.com/luidemendesrios/increment_getx/assets/66266273/9ad26d99-aa77-47a4-a693-ba29e6ab5374)
