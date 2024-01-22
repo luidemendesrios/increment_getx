@@ -30,14 +30,14 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
 
-  //final String title;
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
- 
+ //Obtendo variáveis via Get.put
+ final controller = Get.put(Controller());  
 
   @override
   Widget build(BuildContext context) {
@@ -49,8 +49,8 @@ class _MyHomePageState extends State<MyHomePage> {
           appBar: AppBar(
             
             backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-            
-            title: Text(_.title),
+            title: Text(controller.title),
+           // title: Text('${Get.find<Controller>().title}'),
           ),
           body: Center(
             
@@ -61,15 +61,17 @@ class _MyHomePageState extends State<MyHomePage> {
                 const Text(
                   'Incrementando valor com GetX:',
                 ),
+                // Text('${Get.find<Controller>().valor}',style: Theme.of(context).textTheme.headlineMedium,),
                 Text(
-                  '${_.valor}',
+                  '${controller.valor}',
                   style: Theme.of(context).textTheme.headlineMedium,
                 ),
               ],
             ),
           ),
           floatingActionButton: FloatingActionButton(
-            onPressed: () => _.incrementValor(),
+           // onPressed: () => Get.find<Controller>().incrementValor(),
+            onPressed: () => controller.incrementValor(),
             tooltip: 'Increment',
             child: const Icon(Icons.add),
           ), // This trailing comma makes auto-formatting nicer for build methods.
